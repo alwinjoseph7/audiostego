@@ -9,3 +9,4 @@ Using the phase coding technique to apply the discrete fourier transform to brea
     ```python
     python app.py
     ```
+* Ctrl + click as prompted on the link and enjoy the webpage!
