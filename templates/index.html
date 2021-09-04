@@ -3,21 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Audio Steganography</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div id= "speechContainer">
-    <h1>Upload .wav File</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" />
-        <br>
-        <input type="submit" value="Submit" />  
-        <br> 
-        <label>Enter message to be encoded</label>
-        <br>  
-        <input type="text" name="message">
-        <br>
-        <input type="submit" value="Encode!" />  
-    </form>
-</div>
+    <header>
+        <h1>Audio Steganography</h1>
+        <h2>Team 12</h2>
+    </header>
+    <article id= "speechContainer">
+        <form method="POST" enctype="multipart/form-data">
+            <section class="card"> 
+                <input class="file-upload" type="file" name="file"/>
+                <button class="file-upload-button" type="button">Choose file</button>
+                <p class="file-upload-label"></p>
+                <input type="submit" value="Submit" />  
+            </section>
+            <section class="card">
+                <label for="message">
+                    Enter message to be encoded
+                </label>
+                <input type="text" name="message">
+                <input type="submit" value="Encode!" />  
+            </section>
+            <section class="card">
+                <input class="file-upload" type="file" name="file"/>
+                <button class="file-upload-button" type="button">Choose file</button>
+                <p class="file-upload-label"></p>
+                <input type="submit" value="Decode!" /> 
+            </section>
+        </form>
+    </article>
+    <p></p>
+    <script>
+        document.querySelectorAll('.file-upload-button').forEach(
+            function(button) {
+                const hiddenInput = button.parentElement.querySelector('.file-upload');
+                const label = button.parentElement.querySelector('.file-upload-label');
+                const defaultLabelText = 'No file selected';
+                label.textContent = defaultLabelText;
+                label.title = defaultLabelText;
+                
+
+                button.addEventListener('click', function(){
+                    hiddenInput.click();
+                })
+
+                hiddenInput.addEventListener('change',function(){
+                    const fileNameList = Array.from(hiddenInput.files).map(function(file){
+                        return file.name;
+                    });
+                    label.textContent = fileNameList.join(', ') || defaultLabelText;
+                    label.title = label.textContent;
+                });
+            }
+        );        
+    </script>
 </body>
 </html>
