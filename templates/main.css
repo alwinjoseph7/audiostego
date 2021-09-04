@@ -1,0 +1,119 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #76c4c4;
+    background-color: #76c4c4;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #76c4c4;
+    background-color: #1f1f1f;
+}
+header h1{
+    font-size: 35px;
+    text-align: center;
+    padding: 0 10px;
+}
+header h2{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+#speechContainer{
+    width: 100vw;
+    background-color: #76c4c4;
+}
+form{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.card{
+    min-width: 300px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 15px;
+    box-shadow: 0 5px 9px 0 rgba(0,0,0,0.7);
+    transition: 0.3s;
+    border-radius: 7px;
+    background-color: #1f1f1f;
+}
+
+.card:hover{
+    box-shadow: 0 9px 12px 0 rgba(0,0,0,0.3);
+}
+.card input,.file-upload-button{
+    color: #76c4c4;
+    background-color: #1f1f1f;
+    border: 2px solid #76c4c4;
+}
+.card input[type="submit"]{
+    width: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.card input[type="submit"]:active,.file-upload-button:active{
+    background-color: #76c4c4;
+    color: #101010;
+}
+
+.file-upload{
+    display: none;
+}
+.file-upload-button{
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.file-upload-label{
+    width: 170px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card input[type="text"]{
+    padding: 13px;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 650px){
+    .card{
+        min-height: 40vh;
+    }
+    
+    header h1{
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .card{
+        min-height: 60vh;
+    }
+}
