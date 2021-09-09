@@ -15,7 +15,8 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: #76c4c4;
+    background-image: url(https://pbblogassets.s3.amazonaws.com/uploads/2019/06/15140748/WAV-vs-MP3-Audio-Waveform.jpg);
+    color: #88e6e6;
     background-color: #1f1f1f;
 }
 header h1{
@@ -46,6 +47,7 @@ form{
 .card{
     min-width: 300px;
     min-height: 60vh;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -63,6 +65,7 @@ form{
 }
 .card input,.file-upload-button{
     color: #76c4c4;
+    font-size: 16px;
     background-color: #1f1f1f;
     border: 2px solid #76c4c4;
 }
