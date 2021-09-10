@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route("/",methods=["GET","POST"])
 def index():
+    decodedString = ""
     if request.method == "POST":
         print("FORM DATA RECEIVED")
         
@@ -32,12 +33,11 @@ def index():
             m = f.read()
             f.close()
             location = encode(save_path, m)
-            print(location)
             decodedString = decode(location)
             print(decodedString)
-        
-            
-    return render_template("index.html")
+
+    return render_template("index.html", message = decodedString)
+
 
 if(__name__ == "__main__"):
     app.run(debug=True, threaded=True) 

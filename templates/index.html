@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audio Steganography</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}" />
 </head>
 <body>
     <header>
@@ -26,15 +26,14 @@
                 <input class="file-upload" type="file" name="file"/>
                 <button class="file-upload-button" type="button">Choose file</button>
                 <p class="file-upload-label"></p>
-                <input type="submit" vlue="Submit" />  
+                <input type="submit" value="Submit" />  
             </section>
             
             <section class="card">
                 <!-- <input class="file-upload" type="file" name="file"/>
                 <button class="file-upload-button" type="button">Choose file</button>
                 <p class="file-upload-label"></p> -->
-                <input type="submit" value="Decode!" /> 
-                <p id="decodedString">"Decoded message goes here"</p>
+                <p>Decoded message: {{message}}</p>
                 <span></span>
             </section>
         </form>
