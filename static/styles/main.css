@@ -63,6 +63,7 @@ form{
 .card:hover{
     box-shadow: 0 9px 12px 0 rgba(0,0,0,0.3);
 }
+
 .card input,.file-upload-button{
     color: #76c4c4;
     font-size: 16px;
@@ -105,6 +106,15 @@ form{
     font-size: 15px;
 }
 
+.arrow{
+    border-left: 0.5rem solid #1f1f1f;
+    border-bottom: 0.5rem solid #1f1f1f;
+    width: 1.5rem;
+    display: none;
+    height: 1.5rem;
+    transform: rotate(225deg);
+}
+
 @media screen and (min-width: 650px){
     .card{
         min-height: 40vh;
@@ -115,8 +125,11 @@ form{
     }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1053px){
     .card{
         min-height: 60vh;
+    }
+    .arrow{
+        display: inline;
     }
 }
